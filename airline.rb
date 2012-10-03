@@ -17,15 +17,7 @@ class TravelRequest
     @request[:itinerary][:leave][:arrive_data][:time] = gets.chomp
 
     puts "Please give your return flight depart date and time"
-    @request[:itinerary][:return][:depart_data][:airport] = @request[:itinerary][:leave][:arrive_data][:airport]
-    @request[:itinerary][:return][:depart_data][:date] = gets.chomp
-    @request[:itinerary][:return][:depart_data][:time] = gets.chomp
-
-    puts "Please give your return flight arrive date and time"
-    @request[:itinerary][:return][:arrive_data][:airport] = @request[:itinerary][:leave][:depart_data][:airport]
-    @request[:itinerary][:return][:arrive_data][:date] = gets.chomp
-    @request[:itinerary][:return][:arrive_data][:time] = gets.chomp
-
+    @request[:itinerary][:return][
   end
 
 
