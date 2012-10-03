@@ -12,32 +12,11 @@ class TravelRequest
 
   def initialize(request)
     @request = request
-    # @origin = origin
-    # @destination = destination 
-    enter_travel_plan
-  end
-
-  def enter_travel_plan
-     
-    puts "Please give flight Departing Airport" @request[:itinerary][:leave][:depart_data][:airport] = gets.chomp 
-    puts "Please give departing date (9/28/2012)" @request[:itinerary][:leave][:depart_data][:date] = gets.chomp
-    puts "Please give departing time(2100)" @request[:itinerary][:leave][:depart_data][:time] = gets.chomp
-
-    puts "Please give your flight Arriving Airport, date (9/28/2012), and time (2100)"
-    @request[:itinerary][:leave][:arrive_data][:airport] = gets.chomp
-    @request[:itinerary][:leave][:arrive_data][:date] = gets.chomp
+    # @origave][:arrive_data][:date] = gets.chomp
     @request[:itinerary][:leave][:arrive_data][:time] = gets.chomp
 
     puts "Please give your return flight depart date and time"
-    @request[:itinerary][:return][:depart_data][:airport] = @request[:itinerary][:leave][:arrive_data][:airport]
-    @request[:itinerary][:return][:depart_data][:date] = gets.chomp
-    @request[:itinerary][:return][:depart_data][:time] = gets.chomp
-
-    puts "Please give your return flight arrive date and time"
-    @request[:itinerary][:return][:arrive_data][:airport] = @request[:itinerary][:leave][:depart_data][:airport]
-    @request[:itinerary][:return][:arrive_data][:date] = gets.chomp
-    @request[:itinerary][:return][:arrive_data][:time] = gets.chomp
-
+    @request[:itinerary][:return][
   end
 
 
